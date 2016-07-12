@@ -1,0 +1,16 @@
+<html>
+<body>
+<a href="add_dep.php">Add Department</a> &nbsp <a href="add_empl.php">Add Employee</a> &nbsp <a href="view_dep.php">Edit Department</a>
+&nbsp <a href="view_empl.php">Edit Employee</a>
+<span style="text-align:right; display:block;">
+<a href="logout.php">Logout</a>
+</span>
+<?php
+session_start();
+ if($_SESSION["id"]==""){
+       header("Location: index.php"); 
+  }
+ 
+?>
+</body>
+</html>

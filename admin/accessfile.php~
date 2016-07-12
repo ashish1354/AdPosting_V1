@@ -1,0 +1,34 @@
+<?php
+
+  function checkIDandPass($id,$pass){
+  	$file = explode( PHP_EOL, file_get_contents( "info" ));
+    print_r($file);
+    $line = null;
+    $pattern = $id.":".$pass;
+    foreach ( $file as $line ) 
+    {
+        if($line==$pattern)
+        {
+            return true;
+        }
+    }
+    return false;
+
+  }
+
+   if($_SERVER["REQUEST_METHOD"]=="POST"){      
+   	$lgid=$_POST["lgid"];
+   	$lgpass=$_POST["lgpass"];
+
+   	if (checkIDandPass($lgid,$lgpass)){
+   		 session_start();
+	     $_SESSION["id"] = $lgid;
+	     echo "Success";
+   	}
+   	else
+   	{
+   		echo "<br>id password Not equal";
+   	}
+
+   }
+?>
