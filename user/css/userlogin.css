@@ -1,0 +1,31 @@
+body{
+	background-color: white;
+}
+.maincontent{
+    margin-top: 5px;
+    border-radius: 15px;
+    background-color:  #e6e6ff;
+    margin-left: 15%;
+    width: 75%;
+    height: 100%;
+}	
+.signUp{
+  border: 1px solid black;
+    text-align: center;
+    position: absolute;
+    margin-top: 20%;
+    left:40%;
+}
+.signU_perr{
+    text-align: center;
+    position: absolute;
+    margin-top: 17%;
+    left:43%;
+}
+.head_1{
+	text-align: center;
+    position: absolute;
+    margin-top: 8%;
+    left:45%;
+    color: #3333ff;
+}
